@@ -1,0 +1,26 @@
+/* ======= SCROLLREVEAL ======= */
+
+/* Grille de 3 colonnes pour aligner les cards : [1][2][3] / [4][5][6] */
+.scrollreveal-container {
+    @apply mt-12 grid grid-cols-3 gap-8;
+
+    /* Chaque card : fond sombre, bordure subtile, coins arrondis, contenu en colonne */
+    .scrollreveal-card {
+        @apply bg-gray-700 border border-gray-600 rounded-2xl p-6 flex flex-col gap-2 text-zinc-300 transition-transform duration-200;
+
+        /* Emoji décoratif en haut de la card */
+        .scrollreveal-emoji {
+            @apply text-4xl;
+        }
+
+        /* Titre de la card : blanc et en gras pour se démarquer du texte */
+        .scrollreveal-card-title {
+            @apply text-xl text-zinc-100 font-bold;
+        }
+    }
+
+    /* Au survol : la bordure devient bleue pour indiquer l'interactivité */
+    .scrollreveal-card:hover {
+        @apply border-2 border-blue-400;
+    }
+}

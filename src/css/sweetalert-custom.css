@@ -1,0 +1,31 @@
+/* ======= SWEETALERT2 ======= */
+
+/* Les trois boutons sont alignés horizontalement et centrés */
+.sweetalert-container {
+    @apply flex justify-center gap-6 my-12 text-zinc-100 font-semibold;
+
+    /* Style commun à tous les boutons d'alerte */
+    .sweetalert-btn {
+        @apply w-60 py-6 rounded-2xl opacity-85 transition-transform duration-200;
+
+        /* Bouton vert : confirme une action réussie (message envoyé) */
+        &.sweetalert-btn-sent {
+            @apply bg-emerald-600;
+        }
+
+        /* Bouton rouge : signale une erreur (formulaire invalide) */
+        &.sweetalert-btn-invalid {
+            @apply bg-red-600;
+        }
+
+        /* Bouton orange : avertit d'une action dangereuse (suppression) */
+        &.sweetalert-btn-deleted {
+            @apply bg-orange-400;
+        }
+    }
+
+    /* Au survol : opacité pleine + légère élévation vers le haut (effet "lift") */
+    .sweetalert-btn:hover {
+        @apply opacity-100 -translate-y-1.5;
+    }
+}

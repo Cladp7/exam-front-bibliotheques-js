@@ -1,0 +1,36 @@
+/* ======= SWIPER SLIDER ======= */
+
+/* Le slider occupe toute la largeur et toute la hauteur de l'écran */
+.swiper {
+    @apply w-full h-screen;
+
+    /* position: relative sur chaque slide permet de positionner le bandeau en absolu par-dessus */
+    .swiper-slide {
+        @apply relative;
+    }
+
+    /* L'image couvre tout le slide sans déformation (object-cover recadre si nécessaire) */
+    .swiper-slide img {
+        @apply w-full h-full object-cover;
+    }
+}
+
+/* Conteneur du bandeau de titre : positionné en bas du slide, au-dessus de l'image */
+.swiper-slider-title-box {
+    @apply absolute bottom-0 z-9 w-full;
+
+    /* Fond semi-transparent (75% d'opacité) pour rendre le texte lisible sur l'image */
+    .swiper-slider-bg-banner {
+        @apply absolute bottom-0 z-10 bg-zinc-900 opacity-75 py-21 w-full;
+    }
+
+    /* Les titres sont empilés par-dessus le bandeau grâce au z-index supérieur (z-11 > z-10) */
+    .swiper-slider-titles {
+        @apply absolute bottom-4 z-11 px-32 py-4 w-full;
+
+        /* Titre principal du slide : grand, blanc, en gras */
+        .swiper-slider-main-title {
+            @apply text-4xl font-bold text-zinc-50 py-2;
+        }
+    }
+}

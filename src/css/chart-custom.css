@@ -1,0 +1,22 @@
+/* ======= CHART.JS ======= */
+
+/* Les deux graphiques sont affichés côte à côte (flex) et centrés */
+.charts-warper {
+    @apply flex justify-center gap-10 items-start;
+
+    /* Chaque conteneur de graphique : largeur fixe, fond sombre, coins arrondis */
+    .chart-container {
+        @apply w-lg bg-gray-700 border border-gray-600 rounded-2xl p-6 mt-12;
+
+        /* Le premier graphique (barres) a une hauteur fixe pour que Chart.js puisse s'y adapter */
+        /* (maintainAspectRatio: false dans le JS permet de contrôler la hauteur ici via CSS) */
+        &.chart-container:first-of-type {
+            @apply self-center h-96;
+        }
+    }
+}
+
+/* Titre au-dessus de chaque graphique */
+.chart-title {
+    @apply text-lg text-zinc-100 font-bold mb-4;
+}

@@ -1,0 +1,7 @@
+/* ======= TYPED.JS ======= */
+
+/* Conteneur du titre animé : largeur limitée et centré horizontalement */
+/* max-w-2xl empêche la ligne de texte de s'étirer sur tout l'écran */
+.typed-item {
+    @apply max-w-2xl mx-auto py-7;
+}

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eafc-eval-2026</title>
+
+    <!-- Polices importées depuis Google Fonts via CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ====== Feuille de style CSS du Swiper Slider (importée via CDN jsDelivr) ====== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- ====== Bibliothèque ScrollReveal : anime les éléments au scroll (chargée via CDN unpkg) ====== -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- ====== Feuille de style CSS de SweetAlert2 (boîtes d'alertes stylisées) ====== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- Barre de navigation principale avec les liens vers chaque section -->
+      <nav class="navbar">
+        <h1>
+          <a href="#" class="navbar-home">Clarisse Dupont - Dev Frontend</a>
+        </h1>
+        <ul class="menu-links">
+          <li><a href="#section1">Slider</a></li>
+          <li><a href="#section2">Révélation</a></li>
+          <li><a href="#section3">Typed</a></li>
+          <li><a href="#section4">Chart</a></li>
+          <li><a href="#section5">Alerts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section 1 : Carrousel d'images avec la bibliothèque Swiper.js -->
+      <section id="section1" class="section section-bg-zinc">
+        <!-- Conteneur principal du slider Swiper (la classe "swiper" est obligatoire pour l'initialisation JS) -->
+        <div class="swiper">
+          <!-- Wrapper obligatoire requis par Swiper pour contenir les slides (ne pas supprimer) -->
+          <div class="swiper-wrapper">
+            <!-- Liste des slides (chaque div.swiper-slide correspond à un écran du carrousel) -->
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <img src="src/img/swiper-slider1.jpg" alt="Slide 1" />
+
+              <!-- Boîte de titre superposée sur l'image du slide -->
+              <div class="swiper-slider-title-box">
+                <div class="swiper-slider-bg-banner">
+                  <!-- Bandeau semi-transparent derrière le texte pour améliorer la lisibilité -->
+                </div>
+                <div class="swiper-slider-titles">
+                  <h2 class="secondary-title">Section 1 • Swiper.JS Slider</h2>
+                  <h3 class="swiper-slider-main-title">
+                    Bienvenue sur mon portfolio
+                  </h3>
+                  <p class="text-zinc-400">
+                    Slide 1 – Description de ton projet ou de ta spécialité.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <img src="src/img/swiper-slider2.jpg" alt="Slide 2" />
+
+              <!-- Boîte de titre superposée sur l'image du slide -->
+              <div class="swiper-slider-title-box">
+                <div class="swiper-slider-bg-banner">
+                  <!-- Bandeau semi-transparent derrière le texte pour améliorer la lisibilité -->
+                </div>
+                <div class="swiper-slider-titles">
+                  <h2 class="secondary-title">Section 1 • Swiper.JS Slider</h2>
+                  <h3 class="swiper-slider-main-title">Mes compétences</h3>
+                  <p class="text-zinc-400">
+                    Slide 2 – Présente une compétence ou un projet fictif.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <img src="src/img/swiper-slider3.jpg" alt="Slide 3" />
+
+              <!-- Boîte de titre superposée sur l'image du slide -->
+              <div class="swiper-slider-title-box">
+                <div class="swiper-slider-bg-banner">
+                  <!-- Bandeau semi-transparent derrière le texte pour améliorer la lisibilité -->
+                </div>
+                <div class="swiper-slider-titles">
+                  <h2 class="secondary-title">Section 1 • Swiper.JS Slider</h2>
+                  <h3 class="swiper-slider-main-title">Contacte-moi</h3>
+                  <p class="text-zinc-400">
+                    Slide 3 – Appel à l'action, lien fictif, ect.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination du slider : affiche les petits points de navigation en bas -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Boutons de navigation précédent / suivant (flèches latérales) -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <!-- Section 2 : Animation d'apparition des éléments au scroll avec ScrollReveal.js -->
+      <section id="section2" class="section section-padding section-bg-grey">
+        <h2 class="main-title">
+          Section 2 · <span class="text-blue-400">ScrollReveal.js</span>
+        </h2>
+        <p>
+          Mes projets apparaissent à mesure que tu scrolles. Chaque card a un
+          effet différent
+        </p>
+
+        <!-- Conteneur de toutes les cards animées au scroll (chaque card a un id unique pour que ScrollReveal puisse lui appliquer un effet différent) -->
+        <div class="scrollreveal-container">
+          <!-- Card 1 -->
+          <div id="card1" class="scrollreveal-card">
+            <div class="scrollreveal-emoji">🎨</div>
+            <h3 class="scrollreveal-card-title">Projet fictif 1</h3>
+            <p>
+              Description courte du projet. Technologies utilisées, objectif,
+              résultat.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div id="card2" class="scrollreveal-card">
+            <div class="scrollreveal-emoji">⚡</div>
+            <h3 class="scrollreveal-card-title">Projet fictif 2</h3>
+            <p>
+              Description courte du projet. Technologies utilisées, objectif,
+              résultat.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div id="card3" class="scrollreveal-card">
+            <div class="scrollreveal-emoji">🚀</div>
+            <h3 class="scrollreveal-card-title">Projet fictif 3</h3>
+            <p>
+              Description courte du projet. Technologies utilisées, objectif,
+              résultat.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div id="card4" class="scrollreveal-card">
+            <div class="scrollreveal-emoji">🔧</div>
+            <h3 class="scrollreveal-card-title">Projet fictif 4</h3>
+            <p>
+              Description courte du projet. Technologies utilisées, objectif,
+              résultat.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div id="card5" class="scrollreveal-card">
+            <div class="scrollreveal-emoji">💡</div>
+            <h3 class="scrollreveal-card-title">Projet fictif 5</h3>
+            <p>
+              Description courte du projet. Technologies utilisées, objectif,
+              résultat.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div id="card6" class="scrollreveal-card">
+            <div class="scrollreveal-emoji">🌍</div>
+            <h3 class="scrollreveal-card-title">Projet fictif 6</h3>
+            <p>
+              Description courte du projet. Technologies utilisées, objectif,
+              résultat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 : Effet de frappe automatique avec Typed.js (le texte s'écrit et s'efface en boucle) -->
+      <section
+        id="section3"
+        class="section section-padding section-bg-zinc flex flex-col text-center"
+      >
+        <div class="my-auto">
+          <h2 class="secondary-title">Section 3 • Typed.js</h2>
+          <!-- Le span#element est la cible de Typed.js : c'est là que le texte animé s'affiche -->
+          <h3 class="main-title typed-item">
+            Je suis <span id="element" class="text-yellow-400"></span>
+          </h3>
+          <p class="max-w-md mx-auto">
+            Passionné·e par le web, j'aime créer des expériences fluides et
+            mémorables. Voici quelques mots qui me définissent – ils
+            s'enchaînent tout seuls, regarde.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4 : Graphiques de compétences avec Chart.js -->
+      <section id="section4" class="section section-padding section-bg-grey">
+        <h2 class="main-title">
+          Section 4 · <span class="text-green-400">Chart.js</span>
+        </h2>
+        <p>Mes compétences techniques en un coup d'œil.</p>
+
+        <!-- Conteneur des deux graphiques (barres + donut) — les canvas sont les cibles de Chart.js -->
+        <div class="charts-warper">
+          <div class="chart-container">
+            <h3 class="chart-title">Compétences techniques</h3>
+            <!-- canvas#barChart : Chart.js dessine le graphique en barres dans cet élément -->
+            <canvas id="barChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3 class="chart-title">Répartition du temps projet</h3>
+            <!-- canvas#donutChart : Chart.js dessine le graphique en anneau (donut) dans cet élément -->
+            <canvas id="donutChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 : Alertes stylisées avec la bibliothèque SweetAlert2 -->
+      <section
+        id="section5"
+        class="section section-padding section-bg-zinc flex flex-col text-center"
+      >
+        <div class="my-auto">
+          <h2 class="main-title">
+            Section 5 · <span class="text-pink-400">SweetAlert2</span>
+          </h2>
+          <p class="max-w-3xl mx-auto">
+            Clique sur chaque bouton pour déclencher une alerte différente.
+            Adapte les textes, icônes et couleurs selon ton portfolio fictif.
+          </p>
+
+          <!-- Conteneur des boutons qui déclenchent chacun une alerte SweetAlert2 différente -->
+          <div class="sweetalert-container">
+            <!-- Alerte 1 : confirmation d'envoi de message (icône succès) -->
+            <button id="sent" class="sweetalert-btn sweetalert-btn-sent">
+              <span class="sweetalert-emoji">✅ </span>
+              Message envoyé
+            </button>
+
+            <!-- Alerte 2 : erreur de formulaire invalide (icône erreur) -->
+            <button id="invalid" class="sweetalert-btn sweetalert-btn-invalid">
+              <span class="sweetalert-emoji">❌ </span>
+              Formulaire invalide
+            </button>
+
+            <!-- Alerte 3 : confirmation de suppression avec boîte de dialogue (icône avertissement) -->
+            <button id="deleted" class="sweetalert-btn sweetalert-btn-deleted">
+              <span class="sweetalert-emoji">⚠️ </span>
+              Supprimer un projet
+            </button>
+          </div>
+          <!-- Message de confirmation affiché après suppression (caché par défaut, rendu visible via JS) -->
+          <div id="delete-message" class="text-red-400 hidden">
+            <span>🗑️</span> Projet supprimé (simulation).
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>&copy; EAFC 2025-26 • Approche Développement Frontend</div>
+    </footer>
+
+    <!-- =================== TOUT LE JS (chargé en bas de page pour ne pas bloquer le rendu HTML) ===================== -->
+
+    <!-- Chargement du fichier JavaScript principal (type="module" permet d'utiliser import/export ES6) -->
+    <script type="module" src="/src/js/main.js"></script>
+
+    <!-- ====== Bibliothèque JavaScript Swiper Slider (chargée via CDN jsDelivr) ====== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- ====== Bibliothèque Typed.js : crée l'effet de frappe automatique (chargée via CDN unpkg) ====== -->
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+    <!-- ====== Bibliothèque Chart.js : affiche les graphiques (chargée via CDN jsDelivr) ====== -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <script></script>
+
+    <!-- ====== Bibliothèque SweetAlert2 : affiche les boîtes d'alertes stylisées (chargée via CDN jsDelivr) ====== -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  </body>
+</html>
